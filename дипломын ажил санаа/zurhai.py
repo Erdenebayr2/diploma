@@ -1,7 +1,7 @@
 import requests,pyjokes,wikipedia
 from bs4 import BeautifulSoup
 from googletrans import Translator
-import find_object
+from lab2 import amin
 
 def ords():
     url = "https://gogo.mn/horoscope/western/today"
@@ -64,6 +64,7 @@ def translate():
 def main():
     print('\nсайн байна уу. Би zurhai, tsag agaar, translate, onigoo, болон wikipedia гаас хайлт хийж өгч чадна')
     choose = input('та дээрх сонголтуудаас нэгийг сонгоно бичнэ үү - ')
+    print(choose)
     if choose in 'zurhai':
         ords()
     elif choose in 'tsag agaar':
@@ -75,7 +76,7 @@ def main():
     elif choose in 'wikipedia':
         wikiped()
     elif choose in 'traffic':
-        find_object.FO()
+        amin()
 
-while True:
+if __name__ == '__main__':
     main()
